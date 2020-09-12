@@ -1,0 +1,106 @@
+mixin person(data)
+	.person
+		.person__inner
+			- if (data.img == "")
+				.person__img.person__img_link
+
+			- else 
+				img(src= data.img alt="photo").person__img
+
+			.person__main
+				.person__name= data.name
+				span.person__contact= data.contact
+
+		.person__inner
+			- if (!data.spent == "")
+				span.person__spent= data.spent
+
+			button.white-button= data.button
+
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(rel="stylesheet", href="css/main.css")
+		title M-Social Тестовое задание
+	body
+		nav.navigation
+			.navigation__layout.navigation__layout_burger
+				.wrapper
+					.navigation__burger(aria-label="menu button")
+						.navigation__strip
+						.navigation__strip
+						.navigation__strip
+
+			.navigation__layout.navigation__layout_main
+				ul.navigation__main.wrapper
+					li.navigation__item
+						a.navigation__link(href="#" aria-label="link1") First
+
+					li.navigation__item
+						a.navigation__link(href="#" aria-label="link2") Second
+
+					li.navigation__item
+						span.navigation__link#invite Invite
+
+		.modal
+			.modal__layout
+				.modal__box
+					.modal__header
+						span.modal__caption Invite people to project
+						.modal__close
+
+					.modal__main
+						form.modal__form#form
+							.modal__unit
+								label.modal__field
+									.modal__error Error: Invalid value.
+									input(type="text" placeholder="Name or email").modal__input
+
+								button(type="button").edit-button Can edit
+								
+							input(type="submit" value="Invite 1 person").blue-button
+
+						.modal__wrapper
+							.modal__list
+								+person({
+									img: "img/1.png",
+									name: "Milan Gladis (Owner)",
+									contact: "hello@milangladis.com",
+									spent: "Spent 3h 34mins",
+									button: "Transfer ownership"
+								})
+
+								+person({
+									img: "img/2.png",
+									name: "Emma Watson (Owner)",
+									contact: "emma@watson.com",
+									spent: "Spent 3h 34mins",
+									button: "Revoke Access"
+								})
+
+								+person({
+									img: "",
+									name: "Public link",
+									contact: "http://lor.em/l296gdk6",
+									spent: "",
+									button: "Revoke link"
+								})
+
+								+person({
+									img: "img/1.png",
+									name: "Milan Gladis (Owner)",
+									contact: "hello@milangladis.com",
+									spent: "Spent 3h 34mins",
+									button: "Transfer ownership"
+								})
+
+					.modal__footer
+						span.modal__additive Or share this Project with Public link
+						.modal__inner
+							button.edit-button Can edit
+							button.blue-button Copy link
+
+		script(src="js/main.js")

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>M-Social Тестовое задание</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="navigation__layout navigation__layout_burger">
+        <div class="wrapper">
+          <div class="navigation__burger" aria-label="menu button">
+            <div class="navigation__strip"></div>
+            <div class="navigation__strip"></div>
+            <div class="navigation__strip"></div>
+          </div>
+        </div>
+      </div>
+      <div class="navigation__layout navigation__layout_main">
+        <ul class="navigation__main wrapper">
+          <li class="navigation__item"><a class="navigation__link" href="#" aria-label="link1">First</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#" aria-label="link2">Second</a></li>
+          <li class="navigation__item"><span class="navigation__link" id="invite">Invite</span></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="modal">
+      <div class="modal__layout">
+        <div class="modal__box">
+          <div class="modal__header"><span class="modal__caption">Invite people to project</span>
+            <div class="modal__close"></div>
+          </div>
+          <div class="modal__main">
+            <form class="modal__form" id="form">
+              <div class="modal__unit">
+                <label class="modal__field">
+                  <div class="modal__error">Error: Invalid value.</div>
+                  <input class="modal__input" type="text" placeholder="Name or email"/>
+                </label>
+                <button class="edit-button" type="button">Can edit</button>
+              </div>
+              <input class="blue-button" type="submit" value="Invite 1 person"/>
+            </form>
+            <div class="modal__wrapper">
+              <div class="modal__list">
+                <div class="person">
+                  <div class="person__inner"><img class="person__img" src="img/1.png" alt="photo"/>
+                    <div class="person__main">
+                      <div class="person__name">Milan Gladis (Owner)</div><span class="person__contact">hello@milangladis.com</span>
+                    </div>
+                  </div>
+                  <div class="person__inner"><span class="person__spent">Spent 3h 34mins</span>
+                    <button class="white-button">Transfer ownership</button>
+                  </div>
+                </div>
+                <div class="person">
+                  <div class="person__inner"><img class="person__img" src="img/2.png" alt="photo"/>
+                    <div class="person__main">
+                      <div class="person__name">Emma Watson (Owner)</div><span class="person__contact">emma@watson.com</span>
+                    </div>
+                  </div>
+                  <div class="person__inner"><span class="person__spent">Spent 3h 34mins</span>
+                    <button class="white-button">Revoke Access</button>
+                  </div>
+                </div>
+                <div class="person">
+                  <div class="person__inner">
+                    <div class="person__img person__img_link"></div>
+                    <div class="person__main">
+                      <div class="person__name">Public link</div><span class="person__contact">http://lor.em/l296gdk6</span>
+                    </div>
+                  </div>
+                  <div class="person__inner">
+                    <button class="white-button">Revoke link</button>
+                  </div>
+                </div>
+                <div class="person">
+                  <div class="person__inner"><img class="person__img" src="img/1.png" alt="photo"/>
+                    <div class="person__main">
+                      <div class="person__name">Milan Gladis (Owner)</div><span class="person__contact">hello@milangladis.com</span>
+                    </div>
+                  </div>
+                  <div class="person__inner"><span class="person__spent">Spent 3h 34mins</span>
+                    <button class="white-button">Transfer ownership</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal__footer"><span class="modal__additive">Or share this Project with Public link</span>
+            <div class="modal__inner">
+              <button class="edit-button">Can edit</button>
+              <button class="blue-button">Copy link</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
